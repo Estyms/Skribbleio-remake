@@ -14,7 +14,7 @@ function draw() {
 if (mouseIsPressed) {
 stroke(colors[0],colors[1],colors[2]);//img.save("test","png");
 } else {
-stroke(0,0,0,0);
+stroke(0,0,0,0); 
 
 
 }
