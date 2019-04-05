@@ -1,7 +1,21 @@
+//firebase
+var config = {
+    apiKey: "AIzaSyDFtx9dasSHdURDlHSGNF1T557YECT5Vdc",
+    authDomain: "skribbleio-remake.firebaseapp.com",
+    databaseURL: "https://skribbleio-remake.firebaseio.com",
+    projectId: "skribbleio-remake",
+    storageBucket: "skribbleio-remake.appspot.com",
+    messagingSenderId: "1051457739740"
+  };
+firebase.initializeApp(config);
+var database = firebase.database();
+
+//Skribble
 var loadimage = false;
 var img = new Image();
 var colors = [0,0,0];
 var img2 = new Image();
+firebase.
 function setup() {
 createCanvas(windowWidth, windowHeight);
 }
@@ -45,6 +59,7 @@ function keyTyped(){
   }
   if (key === 'w'){
     img = get();
+    database.ref('Skribble/9ZORKpbhy5VnpPCksu4r/Image').set(img.src);
     console.log("Image saved");
   }
   if (key === 'x'){
