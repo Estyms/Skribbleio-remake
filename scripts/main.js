@@ -1,6 +1,7 @@
 var loadimage = false;
 var img = new Image();
 var colors = [0,0,0];
+var img2 = new Image();
 function setup() {
 createCanvas(windowWidth, windowHeight);
 }
@@ -48,13 +49,13 @@ function keyTyped(){
   }
   if (key === 'x'){
     try {
+      img2 = get();
       clear();
       image(img, 0, 0);
       console.log("Image loaded");
     } catch (e) {
+      image(img2, 0, 0);
       console.log("Image could not be loaded");
-    } finally {
-
     }
   }
   if (key === 'c'){
