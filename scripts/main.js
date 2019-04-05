@@ -1,5 +1,6 @@
 var loadimage = false;
 var img = new Image();
+var colors = [0,0,0];
 function setup() {
 createCanvas(windowWidth, windowHeight);
 }
@@ -9,11 +10,9 @@ var x = 0;
 oldmousey = 0;
 oldmousex = 0;
 function draw() {
-  var r = (x%255);
-  var g = (x%124);
-  var b = (x%614)/2 ;
+
 if (mouseIsPressed) {
-stroke(0);//img.save("test","png");
+stroke(colors[0],colors[1],colors[2]);//img.save("test","png");
 } else {
 stroke(0,0,0,0);
 
@@ -34,11 +33,26 @@ oldmousex = mouseX;
 }
 
 function keyTyped(){
-  if (key === 's'){
+  if (key === "a"){
+    colors = [0,0,0];
+  }
+  if (key === "z"){
+    colors = [255,0,0];
+  }
+  if (key === "e"){
+    colors = [0,255,0];
+  }
+  if (key === "r"){
+    colors = [0,0,255];
+  }
+  if (key === "t"){
+    colors = [255,255,255];
+  }
+  if (key === 'w'){
     img = get();
     console.log("Image saved");
   }
-  if (key === 'r'){
+  if (key === 'x'){
     if (img != null){
     loadimage = true;
     console.log("Image loading");
