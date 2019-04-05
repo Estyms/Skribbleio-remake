@@ -39,8 +39,12 @@ function keyTyped(){
     console.log("Image saved");
   }
   if (key === 'r'){
+    if (img != null){
     loadimage = true;
     console.log("Image loading");
+  } else {
+    console.log("No image saved");
+  }
   }
   if (key === 'c'){
     clear();
