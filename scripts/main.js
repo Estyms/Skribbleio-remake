@@ -20,13 +20,7 @@ stroke(0,0,0,0);
 }
 strokeWeight(4)
 line(mouseX, mouseY,oldmousex,oldmousey);
-x++
-if (loadimage){
-  loadimage = false;
-  clear();
-  image(img, 0, 0);
-  console.log("Image loaded");
-}
+x++;
 oldmousey = mouseY;
 oldmousex = mouseX;
 
@@ -53,12 +47,15 @@ function keyTyped(){
     console.log("Image saved");
   }
   if (key === 'x'){
-    if (img != null){
-    loadimage = true;
-    console.log("Image loading");
-  } else {
-    console.log("No image saved");
-  }
+    try {
+      clear();
+      image(img, 0, 0);
+      console.log("Image loaded");
+    } catch (e) {
+      console.log("Image could not be loaded");
+    } finally {
+
+    }
   }
   if (key === 'c'){
     clear();
