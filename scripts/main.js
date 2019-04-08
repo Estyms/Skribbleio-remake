@@ -15,7 +15,6 @@ var loadimage = false;
 var img = new Image();
 var colors = [0,0,0];
 var img2 = new Image();
-firebase.
 function setup() {
 createCanvas(windowWidth, windowHeight);
 }
@@ -59,7 +58,7 @@ function keyTyped(){
   }
   if (key === 'w'){
     img = get();
-    database.ref('Skribble/9ZORKpbhy5VnpPCksu4r/Image').set(img.src);
+    //database.ref('Skribble/9ZORKpbhy5VnpPCksu4r/Image').set(img.src);
     console.log("Image saved");
   }
   if (key === 'x'){
