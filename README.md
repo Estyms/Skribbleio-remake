@@ -1,4 +1,4 @@
-# Skribbleio-remake
+# Pictionnary
 Just for fun
 
 
