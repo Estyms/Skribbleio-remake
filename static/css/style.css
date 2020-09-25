@@ -1,0 +1,15 @@
+body, html {
+    background-color: darkcyan;
+}
+
+h2 {
+    text-align: center;
+}
+
+#sketch-holder {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+
+

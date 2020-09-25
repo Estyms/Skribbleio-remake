@@ -1,0 +1,24 @@
+{
+  "name": "pictionnary",
+  "version": "1.0.0",
+  "description": "Just for fun",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Estyms/Pictionnary.git"
+  },
+  "author": "Evann Regnault",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Estyms/Pictionnary/issues"
+  },
+  "homepage": "https://github.com/Estyms/Pictionnary#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  }
+}

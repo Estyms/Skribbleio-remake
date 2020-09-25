@@ -17,12 +17,15 @@ var img = new Image();
 var colors = [0,0,0];
 var img2 = new Image();
 var initialized = false
+var canvas;
+
 
 pressure = -2
 
 function setup() {
-  a = createCanvas(800, 600);
-  a.parent('sketch-holder');
+  canvas = createCanvas(round(800*(window.screen.width / 1920)), round(600*(window.screen.height/1080)));
+  canvas.background(255)
+  canvas.parent('sketch-holder');
 }
 
 
@@ -36,7 +39,7 @@ function draw() {
   }
 
   if (mouseIsPressed) {
-  stroke(colors[0],colors[1],colors[2]);//img.save("test","png");
+  stroke(colors[0],colors[1],colors[2]);
   } else {
   stroke(0,0,0,0);
 
@@ -94,7 +97,9 @@ function keyTyped(){
         })
   }
   if (key === 'c'){
+
     clear();
+    canvas.background(255);
     console.log("Image cleared");
   }
 }
